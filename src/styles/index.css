@@ -28,7 +28,20 @@
     -moz-osx-font-smoothing: grayscale;
   
   }
-  
+  /* Light Theme */
+.light {
+  color-scheme: light;
+  background-color: white;
+  color: black;
+}
+
+/* Dark Theme */
+.dark {
+  color-scheme: dark;
+  background-color: #121212; /* Dark background */
+  color: white; /* Light text */
+}
+
   /* Global Styles */
   body {
     margin: 0;
