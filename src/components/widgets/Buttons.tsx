@@ -1,6 +1,6 @@
 // src/components/Button.tsx
 import React from 'react';
-import styles from '../../styles/widgets/Buttons.css';
+import styles from '../../styles/widgets/Button.module.css';
 
 interface ButtonProps {
   onClick: () => void; //value must
@@ -16,8 +16,8 @@ const disablebk = false;
 const Button: React.FC<ButtonProps> = ({ onClick, children,primary }) => {
   return (
 
-    <div> {primary}
-        <button onClick={onClick} className={styles.btn} disabled={disablebk}>
+    <div>
+        <button onClick={onClick} className={`${styles.button} ${styles[primary ?? '']}`} disabled={disablebk}>
       {children} 
     </button>
     </div>

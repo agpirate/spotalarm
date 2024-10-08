@@ -1,6 +1,8 @@
 // src/pages/ItemDetail.tsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import "../../styles/cards/itemiCard.tsx"
+
 
 const ItemDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,9 +20,9 @@ const ItemDetail: React.FC = () => {
   }
 
   return (
-    <div>
-      <h1>{item.title}</h1>
-      <p>{item.description}</p>
+    <div className="card">
+      <h1 className="card-title">{item.title}</h1>
+      <p className="card-content">{item.description}</p>
     </div>
   );
 };
