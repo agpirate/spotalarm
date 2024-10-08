@@ -2,7 +2,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../layouts/Itemilayout.tsx';
-import ItemDetail from '../pages/Main/Item_i_Details';
+import ItemDetail from '../pages/Main/contenting.tsx';
 
 const Itemiroutes: React.FC = () => {
   return (
