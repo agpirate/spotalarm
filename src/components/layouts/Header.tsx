@@ -1,12 +1,24 @@
+// src/components/Navbar.tsx
 import React from 'react';
-import './Header.css';
+import { Link } from 'react-router-dom';
+import './Header.css'; // Add styles here
 
-const Header: React.FC = () => {
-    return (
-        <header className="app-header">
-            <h1>My React App</h1>
-        </header>
-    );
+const Navbar: React.FC = () => {
+  return (
+
+    <header className="header">
+    <h1>App Name</h1>
+    <input type="text" placeholder="Search..." />
+    <div className="user-actions">
+      <button>Notifications</button>
+      <button>Profile</button>
+
+      <Link to="/">Home</Link>
+      <li><a href="/">Home</a></li>
+    </div>
+  </header>
+  );
 };
 
-export default Header;
+export default Navbar;
+

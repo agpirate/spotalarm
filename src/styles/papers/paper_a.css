@@ -1,0 +1,35 @@
+/* Card.css */
+.card-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin: 16px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  .card-header {
+    background-color: #f5f5f5;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .card-title {
+    margin: 0;
+    padding: 0 16px;
+  }
+  
+  .card-content {
+    padding: 16px;
+    max-height: 60px; /* Set max height for ellipsed content */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Use ellipsis for overflowed text */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .card-footer {
+    background-color: #f5f5f5;
+    padding: 16px;
+    text-align: right;
+  }
+  

@@ -1,0 +1,15 @@
+/* Customize scrollbars */
+.scroll-container {
+    scrollbar-width: thin; /* Firefox */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+  

@@ -1,0 +1,14 @@
+/* Example CSS */
+.grid-container {
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  .grid-container.secondary{
+
+      background-color: var(--secondary-color);
+  }
+  .grid-container.primary{
+
+    background-color: var(--primary-color);
+}

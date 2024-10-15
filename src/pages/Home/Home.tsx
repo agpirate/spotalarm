@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../components/widgets/Buttons';
+import Button from '../../components/widgets/Button';
 import './Home.css';
 
 const Home: React.FC = () => {
