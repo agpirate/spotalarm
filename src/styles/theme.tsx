@@ -1,5 +1,5 @@
 // theme.js
-const lightTheme = {
+export const lightTheme = {
   colors: {
     primary: '#ffffff',
     secondary: '#f8f9fa',
@@ -13,7 +13,7 @@ const lightTheme = {
   }
   }
 
-const darkTheme = {
+  export const darkTheme = {
   colors: {
     primary: '#333333',
     secondary: '#444444',
@@ -25,5 +25,6 @@ const darkTheme = {
     lg: '16px',
   }
 };
+export type Theme = typeof lightTheme;
 
-export { lightTheme, darkTheme };
+// export { lightTheme, darkTheme };

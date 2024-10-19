@@ -3,7 +3,7 @@ import Header from '../components/layouts/Header';
 import Navbar from '../components/layouts/Navbar';
 import Footer from '../components/layouts/Footer';
 import Sidebar from '../components/layouts/Sidebar.tsx';
-import './MainLayout.css'; // Add styles here
+// import './MainLayout.css'; // Add styles here
 import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {

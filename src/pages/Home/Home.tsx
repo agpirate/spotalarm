@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../components/widgets/Button';
-import './Home.css';
+// import './Home.css';
 
 const Home: React.FC = () => {
     const handleClick = () => {
@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className="home-page">
+        <div >
             <h2>Welcome to My React App</h2>
             <Button label="Click Me" onClick={handleClick} />
         </div>

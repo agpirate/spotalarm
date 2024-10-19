@@ -1,36 +1,53 @@
 // src/App.tsx
-import React, { useState,useEffect } from 'react';
+import React, {createContext, useContext, useState,useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import { lightTheme, darkTheme } from './styles/theme';
+import ThemeProvider, { ThemeContext } from './context/themContext';
 import GlobalStyles from './styles/GlobalStyles'; // Import your global styles
 
 import Basicroutes from './routes/Basicroutes';
 import Itemiroutes from './routes/Itemiroutes';
 
 
-const App: React.FC = () => {
-  const [theme, setTheme] = useState(lightTheme);
-  const toggleTheme = () => {
-    setTheme(theme === lightTheme ? darkTheme : lightTheme);
+const AppContent = () => {
+  const themeContext = useContext(ThemeContext);
+
+  if (!themeContext) {
+    return null;
+  }
+
+  const { toggleTheme, isDarkMode } = themeContext;
+  const fixedStyle = {
+    position: 'fixed', // Correct way to set fixed position
+    top: '10px',       // Distance from the top of the viewport
+    right: '10px',     // Distance from the right of the viewport
+
+    backgroundColor: 'lightblue', // Background color
+    color: 'black',     // Text color
+    zIndex: 1000,      // Layering on top of other elements
   };
 
+  return (
+    <div style={fixedStyle}>
+        <button onClick={toggleTheme} >
+           {isDarkMode ? 'Light' : 'Dark'} 
+           </button>
+      </div>
+  );
+};
+const App: React.FC = () => {
 
   return (
-    <ThemeProvider theme={theme}>
-       {/* Apply global styles */}
-       <GlobalStyles />
-    //or use the reactive value to change class
-    <div > 
-    <button onClick={toggleTheme} style={{position:'fixed',top:'5px'}}>
-  Mode {theme ? 'Light' : 'Dark'}
-      </button>
-    <Router>
-      <Basicroutes />
-      <Itemiroutes />
-    </Router>
-    </div>
+  //  wrap all style-component && it's definitions of them && provided across components/pages
+    <ThemeProvider>
+      {/* inject global styles */}
+        <GlobalStyles /> 
+        {/* styles_theme switcher action_component(button) */}
+        <AppContent />
+    {/* Routing layouts_xy(pagex,pagey)  ... */}
+       <Router> 
+           <Basicroutes />
+      </Router> 
     </ThemeProvider>
   );
 };

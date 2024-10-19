@@ -1,0 +1,48 @@
+
+  
+  .layoutMain {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    background: #3f51b5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 60px; /* height of the header */
+    left: -80vw; /* Hidden by default */
+    width: 80vw;
+    height: calc(100% - 60px); /* Remaining height below header */
+    background-color: transparent;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .sidebar.open {
+    left: 0; /* Show sidebar when open */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 0; /* Sidebar will cover this space */
+    transition: margin-left 0.3s ease;
+  }
+  
+  .content button {
+    margin-bottom: 20px;
+  }
+  
+  .footer {
+    background: #3f51b5;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  

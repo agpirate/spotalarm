@@ -1,0 +1,3 @@
+Global state management (Redux, Zustand, or context API).
+
+    Purpose: To store your global state logic and actions.

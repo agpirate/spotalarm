@@ -18,6 +18,8 @@ const ReusableFlex: React.FC<FlexProps> = ({
   justify = 'flex-start',
   align = 'stretch',
   gap = '1rem',
+
+  // custome style_class add through it....
   className = '',
 }) => {
   return (

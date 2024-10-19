@@ -1,10 +1,10 @@
 // src/routes/AppRoutes.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MainLayout from '../layouts/Homelayout.tsx';
+import MainLayout from '../layouts/MainLayout.tsx';
 
 import Home from '../pages/Home/Home';
-import About from '../pages/About/About';
+// import About from '../pages/About/About';
 import NotFound from '../pages/NotFound';
 
 const Basicroutes: React.FC = () => {
@@ -12,10 +12,10 @@ const Basicroutes: React.FC = () => {
     <Routes>
         <Route  element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
         </Route>
       
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="*" element={<NotFound />} /> {/* Handles 404 */}
     </Routes>
   );
